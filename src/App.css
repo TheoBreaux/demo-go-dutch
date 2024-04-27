@@ -1,0 +1,93 @@
+#root {
+  max-width: 1029px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+}
+
+.about-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  text-align: left;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 30px;
+}
+
+.about-text {
+  text-align: justify;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 18px;
+}
+
+.text-logo {
+  width: 70%;
+  height: auto;
+}
+
+.logo {
+  width: 45px;
+  height: auto;
+}
+
+.margin {
+  margin: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: bold;
+}
+
+.features-container {
+  display: flex;
+}
+
+.location-features-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 20px; /* Add padding for spacing */
+  border: 1px solid #ccc; /* Add a border for card-like appearance */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  background-color: #f9f9f9; /* Set light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+}
+
+.image-and-info-group {
+  display: flex;
+  width: 50%;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center;
+  padding: 20px; /* Add padding for spacing */
+  border: 1px solid #ccc; /* Add a border for card-like appearance */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  background-color: #f9f9f9; /* Set light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  margin: 20px; /* Add margin to separate cards */
+}
+
+.features-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 25px;
+}
+
+.location-screens {
+  width: 30%;
+  height: auto;
+  margin: 30px;
+}
+
+.screens {
+  width: 45%;
+  height: auto;
+}
