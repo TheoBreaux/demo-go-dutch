@@ -5,7 +5,49 @@
   text-align: center;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  width: 1000px;
+  height: 600px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.feature-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.section-container {
   display: flex;
   align-items: center;
 }
@@ -19,10 +61,17 @@
   font-size: 30px;
 }
 
-.about-text {
+.about-text,
+.feature-description-text {
   text-align: justify;
   font-family: "Red Hat Display", sans-serif;
   font-size: 18px;
+  margin-top: 0;
+}
+
+.feature-description-text {
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .text-logo {
@@ -35,10 +84,6 @@
   height: auto;
 }
 
-.margin {
-  margin: 10px;
-}
-
 .title {
   font-size: 20px;
   font-family: "Red Hat Display", sans-serif;
@@ -47,36 +92,41 @@
 
 .features-container {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .location-features-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   align-items: center;
-  padding: 20px; /* Add padding for spacing */
-  border: 1px solid #ccc; /* Add a border for card-like appearance */
-  border-radius: 5px; /* Add border radius for rounded corners */
-  background-color: #f9f9f9; /* Set light background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .image-and-info-group {
   display: flex;
-  width: 50%;
-  flex-direction: column; /* Arrange items vertically */
+  flex-direction: column;
   align-items: center;
-  padding: 20px; /* Add padding for spacing */
-  border: 1px solid #ccc; /* Add a border for card-like appearance */
-  border-radius: 5px; /* Add border radius for rounded corners */
-  background-color: #f9f9f9; /* Set light background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
-  margin: 20px; /* Add margin to separate cards */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(77, 65, 65, 0.1);
+  margin: 20px;
 }
 
 .features-title {
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: 10px;
   font-family: "Red Hat Display", sans-serif;
   font-size: 25px;
 }
@@ -90,4 +140,65 @@
 .screens {
   width: 45%;
   height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header {
+    width: 100%;
+  }
+
+  .text-logo {
+    width: 70%;
+    height: auto;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 400px;
+  }
+
+  .about-title {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .about-text {
+    font-size: 12px;
+  }
+
+  .go-dutch-image-container {
+    display: flex;
+  }
+
+  .location-features-container {
+    width: 80%;
+  }
+
+  .features-container {
+    width: 90%;
+  }
+
+  .features-title {
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 30px;
+    height: auto;
+  }
+
+  .feature-description-text {
+    font-size: 12px;
+    text-align: justify;
+  }
 }

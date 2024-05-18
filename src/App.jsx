@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import "./App.css";
 import GoDutchTextLogo from "./assets/images/go-dutch-text-logo.png";
 import HomePageScreen from "./assets/images/home-page-screen.png";
@@ -15,70 +16,79 @@ import ReceiptCaptureImage from "./assets/images/receipt-capture-image.png";
 
 const App = () => {
   return (
-    <div>
-      <img
-        className="text-logo"
-        src={GoDutchTextLogo}
-        alt="go dutch text logo"
-      />
+    <div className="app">
+      <div className="header">
+        <img
+          className="text-logo"
+          src={GoDutchTextLogo}
+          alt="go dutch text logo"
+        />
 
-      <iframe
-        width="1000"
-        height="600"
-        src="https://www.youtube.com/embed/DkCAYYEwTSY?si=V5WmMuloGL9IQZw5"
-        title="Go Dutch!"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      />
-
-      <div className="about-container">
-        <h2 className="about-title">About</h2>
-        <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
-      </div>
-
-      <p className="about-text">
-        Tired of the discomfort and awkward shuffle that comes when it's time to
-        split the bill? Afraid your celebratory night out with friends will
-        become an uncomfortable situation because you don't really care to pick
-        up a portion of Jessica's five expresso martinis when you go to split
-        the bill?
-      </p>
-      <p className="about-text">
-        Enter<span className="title"> Go Dutch!</span>, the app that makes
-        sharing, splitting and paying your bill with friends hassle-free!{" "}
-        <span className="title"> Go Dutch!</span> let's you say goodbye to the
-        headache of dividing the bill manually and allows you to effortlessly
-        split the bill with your dining companions by simply taking a photo of
-        the receipt, ultimately ensuring everyone pays their fair share, along
-        with providing many other user features.
-      </p>
-
-      <div className="location-features-container">
-        <div>
-          <img
-            className="location-screens"
-            src={HomePageScreen}
-            alt="go dutch app screenshot"
-          />
-          <img
-            className="location-screens"
-            src={FeaturedRestaurantsScreen}
-            alt="go dutch app screenshot"
+        <div className="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/DkCAYYEwTSY?si=V5WmMuloGL9IQZw5"
+            title="Go Dutch!"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowfullscreen
           />
         </div>
+      </div>
 
-        <div className="text">
-          <h2 className="features-title">Location Services!</h2>{" "}
+      <div className="about-container">
+        <div className="section-container">
+          <h2 className="about-title">About</h2>
           <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
-          <p className="about-text margin">
-            Location-based feature seamlessly integrates with mapping services
-            to track your whereabouts, providing real-time suggestions for
-            featured restaurants in your vicinity. Whether you're exploring a
-            new city or simply seeking local culinary delights, this feature
-            ensures you're always presented with the best dining options
-            tailored to your location.
-          </p>
+        </div>
+
+        <p className="about-text">
+          Tired of the discomfort and awkward shuffle that comes when it's time
+          to split the bill? Afraid your celebratory night out with friends will
+          become an uncomfortable situation because you don't really care to
+          pick up a portion of Jessica's five expresso martinis when you go to
+          split the bill?
+        </p>
+        <p className="about-text">
+          Enter<span className="title"> Go Dutch!</span>, the app that makes
+          sharing, splitting and paying your bill with friends hassle-free!{" "}
+          <span className="title"> Go Dutch!</span> let's you say goodbye to the
+          headache of dividing the bill manually and allows you to effortlessly
+          split the bill with your dining companions by simply taking a photo of
+          the receipt, ultimately ensuring everyone pays their fair share, along
+          with providing many other user features.
+        </p>
+      </div>
+
+      <div className="features-container">
+        <div className="image-and-info-group">
+          <div className="go-dutch-image-container">
+            <img
+              className="location-screens"
+              src={HomePageScreen}
+              alt="go dutch app screenshot"
+            />
+            <img
+              className="location-screens"
+              src={FeaturedRestaurantsScreen}
+              alt="go dutch app screenshot"
+            />
+          </div>
+
+          <div className="feature-section">
+            <div className="section-container">
+              <h2 className="features-title">Location Services!</h2>{" "}
+              <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
+            </div>
+
+            <p className="feature-description-text">
+              Location-based feature seamlessly integrates with mapping services
+              to track your whereabouts, providing real-time suggestions for
+              featured restaurants in your vicinity. Whether you're exploring a
+              new city or simply seeking local culinary delights, this feature
+              ensures you're always presented with the best dining options
+              tailored to your location.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -89,10 +99,13 @@ const App = () => {
             src={CreateNewSplitScreen}
             alt="go dutch app screenshot"
           />
-          <div className="text">
-            <h2 className="features-title">Create A Split!</h2>
-            <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
-            <p className="about-text margin">
+          <div className="feature-section">
+            <div className="section-container">
+              <h2 className="features-title">Create A Split!</h2>
+              <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
+            </div>
+
+            <p className="feature-description-text">
               Our integration of Google Places allows us to dynamically fetch a
               list of nearby restaurants, streamlining the create new split bill
               process by automatically populating options based on your
@@ -106,10 +119,13 @@ const App = () => {
             src={ReceiptCaptureImage}
             alt="go dutch app screenshot"
           />
-          <div className="text">
-            <h2 className="features-title">Receipt Capture!</h2>
-            <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
-            <p className="about-text margin">
+          <div className="feature-section">
+            <div className="section-container">
+              <h2 className="features-title">Receipt Capture!</h2>
+              <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
+            </div>
+
+            <p className="feature-description-text">
               Our receipt-parsing feature revolutionizes bill-splitting by
               allowing users to capture images of receipts, automatically
               extracting text such as dinner item names and prices. This
@@ -129,10 +145,13 @@ const App = () => {
             src={AssignItems}
             alt="go dutch app screenshot"
           />
-          <div className="text">
-            <h2 className="features-title">Swippable Dinner Items!</h2>{" "}
-            <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
-            <p className="about-text margin">
+          <div className="feature-section">
+            <div className="section-container">
+              <h2 className="features-title">Swippable Dinner Items!</h2>{" "}
+              <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
+            </div>
+
+            <p className="feature-description-text">
               Our swippable dinner items feature streamlines the dining
               experience, enabling users to effortlessly swipe up the item tiles
               to assign them to the current diner displayed in the app. Simplify
@@ -147,10 +166,13 @@ const App = () => {
             src={AddDinersScreen}
             alt="go dutch app screenshot"
           />
-          <div className="text">
-            <h2 className="features-title">Add Diners!</h2>
-            <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
-            <p className="about-text margin">
+          <div className="feature-section">
+            <div className="section-container">
+              <h2 className="features-title">Add Diners!</h2>
+              <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
+            </div>
+
+            <p className="feature-description-text">
               Our "Add Diners" feature taps into our extensive user database,
               enabling you to seamlessly include companions to your split bill
               directly from our network. Whether it's friends, family, or
@@ -169,10 +191,13 @@ const App = () => {
             src={SelectBirthdaysModal}
             alt="go dutch app screenshot"
           />
-          <div className="text">
-            <h2 className="features-title">Birthday Diner Feature!</h2>{" "}
-            <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
-            <p className="about-text margin">
+          <div className="feature-section">
+            <div className="section-container">
+              <h2 className="features-title">Birthday Diner Feature!</h2>{" "}
+              <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
+            </div>
+
+            <p className="feature-description-text">
               Our "Birthday Diner" feature simplifies the celebration by
               allowing you to flag any diner birthdays. At the end, choose to
               distribute their expenses among the group, and our system will
@@ -187,12 +212,15 @@ const App = () => {
             src={CloseOutDetails}
             alt="go dutch app screenshot"
           />
-          <div className="text">
-            <h2 className="features-title">
-              Payment Due Notifications & Check Closeout Details/History!
-            </h2>{" "}
-            <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
-            <p className="about-text margin">
+          <div className="feature-section">
+            <div className="section-container">
+              <h2 className="features-title">
+                Payment Due Notifications & History!
+              </h2>{" "}
+              <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
+            </div>
+
+            <p className="feature-description-text">
               Payment due notifications are immediately sent out once the check
               is closed, notifying all diners what portion they owe to the
               primary diner. "Check Closeout" and "Dining Event History" screens
@@ -214,10 +242,13 @@ const App = () => {
             alt="go dutch app screenshot"
           />
 
-          <div className="text">
-            <h2 className="features-title">Connect With Users!</h2>
-            <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
-            <p className="about-text margin">
+          <div className="feature-section">
+            <div className="section-container">
+              <h2 className="features-title">Connect With Users!</h2>
+              <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
+            </div>
+
+            <p className="feature-description-text">
               Our user profiles facilitate social interaction by allowing users
               to explore and learn about each other through profile informaion.
               Discover shared interests, backgrounds, and experiences, fostering
@@ -233,10 +264,13 @@ const App = () => {
             alt="go dutch app screenshot"
           />
 
-          <div className="text">
-            <h2 className="features-title">Save Favorite Diners!</h2>{" "}
-            <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
-            <p className="about-text margin">
+          <div className="feature-section">
+            <div className="section-container">
+              <h2 className="features-title">Favorite Diners!</h2>{" "}
+              <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
+            </div>
+
+            <p className="feature-description-text">
               Our "Favorite Diners" feature lets you preserve cherished dining
               memories by saving the profiles of your favorite companions with
               whom you've shared memorable meals, with an area for you to save
@@ -252,10 +286,13 @@ const App = () => {
             src={FavoriteRestaurantsScreen}
             alt="go dutch app screenshot"
           />
-          <div className="text">
-            <h2 className="features-title">Save Favorite Restaurants!</h2>{" "}
-            <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
-            <p className="about-text margin">
+          <div className="feature-section">
+            <div className="section-container">
+              <h2 className="features-title">Favorite Restaurants!</h2>{" "}
+              <img className="logo" src={GoDutchLogo} alt="go dutch logo" />
+            </div>
+
+            <p className="feature-description-text">
               Our "Favorite Restaurants" feature enables you to curate a
               personalized list of beloved dining spots, ensuring quick and
               effortless access for making reservations. It also allows you to
